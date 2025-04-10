@@ -21,6 +21,7 @@ const useNotesStore = defineStore(
       notes.value.push({
         id: id,
         text: text,
+        isCreated: true,
       })
     }
 
@@ -28,6 +29,7 @@ const useNotesStore = defineStore(
       const index = notes.value.findIndex((n) => n.id === id)
 
       notes.value[index].text = text
+      notes.value[index].isCreated = false
     }
 
     function deleteNote(id: number) {

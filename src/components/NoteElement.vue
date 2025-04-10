@@ -13,7 +13,7 @@
 
   const inputText = ref<string>('')
 
-  const isEditing = ref<boolean>(false)
+  const isEditing = ref<boolean>(props.note.isCreated ? true : false)
   const textarea = ref<HTMLTextAreaElement | null>(null)
 
   const autoResize = (): void => {
